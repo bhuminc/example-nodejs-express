@@ -112,17 +112,17 @@ workflows:
   version: 2
   build_test_ship_deploy:
     jobs:
-      - build
-      - test:
+      - Build
+      - Test:
           requires:
-            - build
-      - ship:
+            - Build
+      - Ship:
           requires:
-            - build
-            - test
-      - deploy:
+            - Build
+            - Test
+      - Deploy:
           type: approval
           requires:
-            - build
-            - test
-            - ship
+            - Build
+            - Test
+            - Ship
