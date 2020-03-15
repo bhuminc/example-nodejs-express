@@ -4,7 +4,7 @@
 # build , test , push to docker hub , deploy without workflows
 version: 2
 jobs:
-  build:
+  Build:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.11.1-stretch
