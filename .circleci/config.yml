@@ -28,8 +28,8 @@ jobs:
           name: "Build docker image and push to docker hub"
           command: |
               cp Dockerfile.production Dockerfile
-              docker build -t bhuminc/example-nodejs-circle:latest .
-              docker build -t bhuminc/example-nodejs-circle:${CIRCLE_SHA1} .
-              docker push bhuminc/example-nodejs-circle:latest
-              docker push bhuminc/example-nodejs-circle:${CIRCLE_SHA1}
+              docker build -t bhuminc/learn:latest .
+              docker build -t bhuminc/elearn:${CIRCLE_SHA1} .
+              docker push bhuminc/learn:latest
+              docker push bhuminc/learn:${CIRCLE_SHA1}
       - run: echo Done
